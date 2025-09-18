@@ -1,0 +1,218 @@
+/* Wklej cały ten kod do pliku style.css */
+
+:root {
+    --primary-color: #4a00e0;
+    --secondary-color: #8e2de2;
+    --background-color: #f0f2f5;
+    --container-bg-color: #ffffff;
+    --text-color: #333;
+    --text-light-color: #666;
+    --border-color: #e0e6ed;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--container-bg-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    opacity: 0.8;
+}
+
+main {
+    padding: 2.5rem;
+    flex-grow: 1;
+}
+
+.list-header h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.details-header h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    margin: 0 0 1.5rem 0;
+}
+
+
+#script-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#script-list > li { /* Styl tylko dla głównych elementów li */
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    background-color: #fafafa;
+}
+.script-item-main{
+     cursor: pointer;
+}
+
+#script-list > li:hover {
+    transform: translateY(-3px);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.script-item-main i {
+    color: var(--secondary-color);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+#script-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+
+/* === STYLE DLA ZAGNIEŻDŻONYCH LIST === */
+ul.dependencies-list {
+    list-style: none;
+    padding-left: 25px;
+    margin-top: 10px;
+    border-left: 2px solid #e0e6ed;
+}
+
+ul.dependencies-list li {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    color: #6c757d;
+    position: relative;
+    cursor: pointer;
+}
+
+ul.dependencies-list li:hover {
+    color: var(--primary-color);
+    background-color: #f0f2f5;
+    border-radius: 5px;
+}
+
+ul.dependencies-list li i {
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+/* Style dla sekcji zależności w widoku szczegółów */
+#requires-scripts-container, #required-by-container {
+    background-color: #f0f2f5;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#requires-scripts-container h3, #required-by-container h3 {
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+#requires-scripts-list, #required-by-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#requires-scripts-list li, #required-by-list li {
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: background-color 0.2s ease;
+}
+
+#requires-scripts-list li:hover, #required-by-list li:hover {
+    background-color: #e9eaf2;
+}
+
+
+/* Style dla przycisków */
+.button-group, .button-group-single {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+button {
+    flex-grow: 1;
+    background-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-size: 200%;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-position: right;
+    box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3);
+}
+
+.button-group-single button {
+    flex-grow: 0;
+    width: auto;
+    background: #6c757d;
+    color: white;
+}
+.button-group-single button:hover {
+    background: #5a6268;
+}
+
+.hidden {
+    display: none;
+}

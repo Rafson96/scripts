@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Skrypty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-code"></i> Moja Baza Skryptów</h1>
+            <p>Twoja osobista biblioteka gotowych fragmentów kodu.</p>
+        </header>
+        
+        <main>
+            <!-- Widok listy skryptów -->
+            <div id="script-list-container">
+                <div class="list-header">
+                    <h2><i class="fa-solid fa-list-ul"></i> Dostępne Skrypty</h2>
+                </div>
+                <ul id="script-list">
+                    <!-- Lista z zagnieżdżeniami zostanie wygenerowana tutaj -->
+                </ul>
+            </div>
+
+            <!-- Widok szczegółów wybranego skryptu -->
+            <div id="script-details-container" class="hidden">
+                <div class="details-header">
+                    <h2 id="script-name-details"></h2>
+                </div>
+                <p id="script-description"></p>
+
+                <!-- Sekcja na skrypty, których TEN skrypt wymaga -->
+                <div id="requires-scripts-container" class="hidden">
+                    <h3><i class="fa-solid fa-puzzle-piece"></i> Wymaga skryptów:</h3>
+                    <ul id="requires-scripts-list"></ul>
+                </div>
+
+                <!-- Sekcja na skrypty, które wymagają TEGO skryptu -->
+                <div id="required-by-container" class="hidden">
+                    <h3><i class="fa-solid fa-sitemap"></i> Jest wymagany przez:</h3>
+                    <ul id="required-by-list"></ul>
+                </div>
+                
+                <div class="button-group">
+                    <button id="copy-button"><i class="fa-regular fa-copy"></i> Skopiuj kod</button>
+                </div>
+
+                <div class="button-group-single">
+                    <button id="back-button"><i class="fa-solid fa-arrow-left"></i> Powrót do listy</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app2.js"></script>
+</body>
+</html>
