@@ -128,7 +128,7 @@ return descriptions;
   console.log('Użyty select:', select);
   console.table(results);
 })();
-`,},
+`, },
         { id: 3, name: "Główny skrypt: Rejestracja użytkownika", description: "Rejestruje użytkownika, również walidując email.", script: "const registerUser = (email) => { if (isValidEmail(email)) { console.log('Rejestracja...'); } };",  },
         { id: 4, name: "Skrypt niezależny: Generator haseł", description: "Tworzy losowe, bezpieczne hasło.", script: "const generatePassword = () => Math.random().toString(36).slice(-8);" }
     ];
@@ -242,5 +242,4 @@ return descriptions;
 
     // === INICJALIZACJA APLIKACJI ===
     renderScriptList(); 
-
 });
